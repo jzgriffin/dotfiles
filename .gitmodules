@@ -1,0 +1,3 @@
+[submodule "dircolors/.config/dircolors-solarized"]
+	path = dircolors/.config/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized
