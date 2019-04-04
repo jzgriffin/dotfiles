@@ -69,6 +69,13 @@ inoremap <C-c> <C-c>u
 nnoremap <silent> <leader>m :make<cr>
 nnoremap <silent> <leader>! :source $MYVIMRC<cr>
 
+" Searching mappings
+nnoremap <silent> <leader>f :Files<cr>
+nnoremap <silent> <leader>/ :BLines<cr>
+nnoremap <silent> <leader>b :Buffers<cr>
+nnoremap <silent> <leader>r :Rg<cr>
+nnoremap <silent> <leader>C :Commands<cr>
+
 " Buffering mappings
 nnoremap <BS> <C-^>
 cnoremap w!! !sudo tee %
