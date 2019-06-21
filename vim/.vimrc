@@ -30,12 +30,14 @@ set pastetoggle=<F12>
 set matchpairs+=<:>
 set textwidth=78
 set formatoptions=tcqj
+set spell
+set spelllang=en_us
 
 " Indenting
 set autoindent
 set smartindent
 set cindent
-set cinoptions=N-s
+set cinoptions=N0
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -77,10 +79,12 @@ nnoremap <silent> <leader>r :Rg<cr>
 nnoremap <silent> <leader>C :Commands<cr>
 
 " Buffering mappings
+nnoremap :Bd :Bdelete<cr>
 nnoremap <BS> <C-^>
 cnoremap w!! !sudo tee %
 nnoremap <silent> <leader>w :write<cr>
 nnoremap <silent> <leader>d :Bdelete<cr>
+nnoremap <silent> <leader>D :bufdo :Bdelete<cr>
 nnoremap <silent> <leader>; :buffers<cr>
 nnoremap <silent> <leader>[ :bprevious<cr>
 nnoremap <silent> <leader>] :bnext<cr>
@@ -104,18 +108,16 @@ nnoremap <silent> <leader>S :new<cr>
 vnoremap < <gv
 vnoremap > >gv
 nnoremap <silent> <esc><esc> :nohlsearch<cr>
-nnoremap <silent> <leader>cc :TComment<cr>
-vnoremap <silent> <leader>cc :TComment<cr>
 nnoremap <silent> <leader>ci gg=G
 nnoremap <silent> <leader>ct :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 vnoremap <silent> <leader>ct :let _s=@/<Bar>:'<,'>s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+iabbrev </ </<C-X><C-O>
 
 " File types
 filetype on
 filetype plugin on
 filetype indent on
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd BufNewFile,BufReadPost *.v set filetype=coq
 
 " matchit
 runtime macros/matchit.vim
@@ -138,8 +140,10 @@ let g:vimtex_disable_version_warning = 1
 
 " Plugins
 call plug#begin()
+Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 Plug 'idris-hackers/idris-vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'killphi/vim-ebnf'
@@ -149,6 +153,7 @@ Plug 'moll/vim-bbye'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'

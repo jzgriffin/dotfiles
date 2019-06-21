@@ -9,7 +9,11 @@ colors
 
 # History
 setopt -hg
-HISTFILE=/dev/null
+setopt inc_append_history_time
+setopt extended_history
+HISTSIZE=32768
+SAVEHIST=32768
+HISTFILE=~/.zsh_history
 LESSHISTFILE=/dev/null
 
 # Piping aliases
