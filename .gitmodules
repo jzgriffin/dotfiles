@@ -1,3 +1,6 @@
-[submodule "dircolors/.config/dircolors-solarized"]
-	path = dircolors/.config/dircolors-solarized
-	url = https://github.com/seebi/dircolors-solarized
+[submodule "dircolors/.local/share/dircolors/nord"]
+	path = dircolors/.local/share/dircolors/nord
+	url = https://github.com/arcticicestudio/nord-dircolors.git
+[submodule "tmux/.local/share/tmux/plugins/tpm"]
+	path = tmux/.local/share/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git

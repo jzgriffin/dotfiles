@@ -1,9 +1,15 @@
 # Locally-customized zshenv prefix
 [[ -f ~/.zshenv.local.pre ]] && source ~/.zshenv.local.pre
 
+# XDG paths
+[[ -z "$XDG_CONFIG_HOME" ]] && export XDG_CONFIG_HOME="$HOME/.config"
+[[ -z "$XDG_CACHE_HOME" ]] && export XDG_CACHE_HOME="$HOME/.cache"
+[[ -z "$XDG_DATA_HOME" ]] && export XDG_DATA_HOME="$HOME/.local/share"
+
 # Editing
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
+export TERMINAL=alacritty
 
 # Search path
 typeset -U path # Declare the path array as a set

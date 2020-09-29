@@ -1,20 +1,30 @@
 # dotfiles
 
 These are my personalized dotfiles for the following programs:
+- alacritty
 - dircolors
+- nvim
 - tmux
-- vim
 - zsh
+
+## Dependencies
+
+- stow
+- ccls
+- ripgrep
 
 ## Installation
 
-These dotfiles are meant for use with GNU stow.
 ```sh
 git clone https://github.com/nokurn/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-git submodule update -init --recursive
-stow dircolors
-stow tmux
-stow vim
-stow zsh
+sh install.sh
+```
+
+### nvim
+
+```
+:PlugUpgrade
+:PlugUpdate
+:CocInstall coc-marketplace coc-json coc-ccls coc-cmake coc-lua coc-python coc-rust-analyzer
 ```

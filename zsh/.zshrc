@@ -2,7 +2,7 @@
 [[ -f ~/.zshrc.pre.local ]] && source ~/.zshrc.pre.local
 
 # Modules
-autoload -U compinit promptinit colors
+autoload -Uz compinit promptinit colors
 compinit
 promptinit
 colors
@@ -27,7 +27,7 @@ alias egrep='egrep --color=auto'
 if [[ "$(uname -s)" == "Darwin" || "$(uname -s)" =~ "BSD" ]]; then
     alias ls='ls -G'
 else
-    [[ -f ~/.dircolors ]] && eval $(dircolors ~/.dircolors)
+    [[ -f $XDG_CONFIG_HOME/dir_colors ]] && eval $(dircolors $XDG_CONFIG_HOME/dir_colors)
     alias ls='ls --color=auto'
 fi
 
@@ -39,6 +39,8 @@ alias du='du -h'
 alias df='df -h'
 
 # Functions
+fpath+=~/.zsh_functions
+
 take() {
     mkdir -p $1 && cd $1
 }
