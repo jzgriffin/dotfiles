@@ -28,3 +28,8 @@ sh install.sh
 :PlugUpdate
 :CocInstall coc-marketplace coc-json coc-ccls coc-cmake coc-lua coc-python coc-rust-analyzer
 ```
+
+### tmux
+
+After starting tmux for the first time, press `<c-space> I` to install
+plugins via tpm.

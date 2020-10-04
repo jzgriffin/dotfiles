@@ -1,13 +1,23 @@
-git submodule update --init --recursive
+# XDG paths
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 
+# Install symlinks to package configurations AFTER pulling submodules
+git submodule update --init --recursive
 stow alacritty
 stow dircolors
 stow nvim
 stow tmux
 stow zsh
 
-ln -s $HOME/.local/share/dircolors/nord/src/dir_colors $HOME/.config/dir_colors
+# Install the dircolors
+ln -sf "$XDG_DATA_HOME/dircolors/nord/src/dir_colors" "$XDG_CONFIG_HOME/dir_colors"
 
+# Install the tmux package manager
+git clone https://github.com/tmux-plugins/tpm.git "$XDG_DATA_HOME/tmux/plugins/tpm"
+
+# Install git aliases
 git config --global alias.aa 'add --all'
 git config --global alias.br 'branch'
 git config --global alias.ci 'commit'
