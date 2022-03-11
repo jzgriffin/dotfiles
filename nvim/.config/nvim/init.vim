@@ -99,7 +99,6 @@ nnoremap <silent> <leader>w :write<cr>
 nnoremap <silent> <leader>W :bufdo :write<cr>
 nnoremap <silent> <leader>d :Bdelete<cr>
 nnoremap <silent> <leader>D :bufdo :Bdelete<cr>
-nnoremap <silent> <leader>; :buffers<cr>
 nnoremap <silent> <leader>[ :bprevious<cr>
 nnoremap <silent> <leader>] :bnext<cr>
 
