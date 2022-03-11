@@ -96,6 +96,7 @@ nnoremap <silent> <leader>fc :Commands<cr>
 " Buffering mappings
 nnoremap <bs> <C-^>
 nnoremap <silent> <leader>w :write<cr>
+nnoremap <silent> <leader>W :bufdo :write<cr>
 nnoremap <silent> <leader>d :Bdelete<cr>
 nnoremap <silent> <leader>D :bufdo :Bdelete<cr>
 nnoremap <silent> <leader>; :buffers<cr>
