@@ -8,7 +8,6 @@ Plug 'alvan/vim-closetag'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'danro/rename.vim'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
-Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'moll/vim-bbye'
