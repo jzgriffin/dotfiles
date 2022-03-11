@@ -25,6 +25,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'wakatime/vim-wakatime'
 call plug#end()
 
+function! HasPlugin(name)
+    return (
+        \ has_key(g:plugs, a:name) &&
+        \ isdirectory(g:plugs[a:name].dir)
+        \ )
+endfunction
+
 " Searching
 set ignorecase
 set smartcase
@@ -124,15 +131,15 @@ autocmd BufWritePre *
 
 " Colors
 set background=dark
-if has_key(g:plugs, 'nord-vim')
+if HasPlugin('nord-vim')
     colorscheme nord
 endif
-if has_key(g:plugs, 'airline-themes')
+if HasPlugin('airline-themes')
     let g:airline_theme='nord'
 endif
 
 " Additional configuration
-if has_key(g:plugs, 'coc.nvim')
+if HasPlugin('coc.nvim')
     exe 'source '.stdpath('config').'/coc.vim'
 endif
 exe 'silent! source '.stdpath('config').'/local.vim'
