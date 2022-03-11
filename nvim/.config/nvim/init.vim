@@ -111,7 +111,7 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-nnoremap <silent> <leader>c :enew<cr>
+nnoremap <silent> <leader>n :enew<cr>
 nnoremap <silent> <leader>% :vnew<cr>
 nnoremap <silent> <leader>" :new<cr>
 
