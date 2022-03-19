@@ -37,6 +37,7 @@ alias la='ls -a'
 alias l='ls -la'
 alias du='du -h'
 alias df='df -h'
+alias rtree='rg --files | tree --fromfile'
 
 # Functions
 fpath+=~/.zsh_functions
