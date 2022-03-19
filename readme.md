@@ -10,7 +10,9 @@ These are my personalized dotfiles for the following programs:
 ## Dependencies
 
 - stow
-- ccls
+- clangd
+- pep8
+- flake8
 - ripgrep
 
 ## Installation
@@ -26,7 +28,7 @@ sh install.sh
 ```
 :PlugUpgrade
 :PlugUpdate
-:CocInstall coc-marketplace coc-json coc-ccls coc-cmake coc-lua coc-python coc-rust-analyzer
+:CocInstall coc-marketplace coc-json coc-clangd coc-cmake coc-pyright coc-rust-analyzer
 ```
 
 ### tmux
