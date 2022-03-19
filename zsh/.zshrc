@@ -16,6 +16,9 @@ SAVEHIST=32768
 HISTFILE=~/.zsh_history
 LESSHISTFILE=/dev/null
 
+# fzf configuration
+export FZF_DEFAULT_COMMAND='rg --files'
+
 # Piping aliases
 alias -g G='| grep'
 alias -g E='| egrep'
