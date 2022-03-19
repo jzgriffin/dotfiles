@@ -91,6 +91,7 @@ nnoremap <silent> <leader>f/ :BLines<cr>
 nnoremap <silent> <leader>fb :Buffers<cr>
 nnoremap <silent> <leader>fr :Rg<cr>
 nnoremap <silent> <leader>fc :Commands<cr>
+" Reserved for coc: fd, fo, fs
 
 " Buffering mappings
 nnoremap <bs> <C-^>
