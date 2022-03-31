@@ -82,6 +82,7 @@ nnoremap <space> <nop>
 vnoremap . :normal .<cr>
 
 " Editing mappings
+vnoremap <silent> <leader>s :sort<cr>
 inoremap <C-c> <C-c>u
 nnoremap Y y$
 
