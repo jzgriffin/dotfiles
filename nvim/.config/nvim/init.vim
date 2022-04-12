@@ -3,9 +3,9 @@
 " Plugin
 call plug#begin(stdpath('data').'/plugins')
 Plug 'airblade/vim-gitgutter'
-Plug 'arcticicestudio/nord-vim'
 Plug 'alvan/vim-closetag'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'chriskempson/base16-vim'
 Plug 'danro/rename.vim'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -132,11 +132,15 @@ autocmd BufWritePre *
 
 " Colors
 set background=dark
-if HasPlugin('nord-vim')
-    colorscheme nord
+if HasPlugin('base16-vim')
+    let base16colorspace=256
+    colorscheme base16-tomorrow-night
+    " Do not underline the number of the current line.
+    hi CursorLineNr cterm=none
 endif
-if HasPlugin('airline-themes')
-    let g:airline_theme='nord'
+if HasPlugin('vim-airline-themes')
+    let g:airline_powerline_fonts=1
+    let g:airline_theme='base16_tomorrow_night'
 endif
 
 " Additional configuration
