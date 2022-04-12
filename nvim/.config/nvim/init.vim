@@ -39,7 +39,7 @@ set smartcase
 set colorcolumn=72,78,100
 set cursorline
 set lazyredraw
-set number
+set relativenumber
 set pastetoggle=<F12>
 set scrolloff=2
 set showmatch
