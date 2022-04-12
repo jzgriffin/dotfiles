@@ -7,3 +7,6 @@
 [submodule "tmux/.local/share/tmux/unmanaged-plugins/tmux-tomorrow"]
 	path = tmux/.local/share/tmux/unmanaged-plugins/tmux-tomorrow
 	url = https://github.com/edouard-lopez/tmux-tomorrow.git
+[submodule "tmux/.local/share/tmux/plugins/tpm"]
+	path = tmux/.local/share/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git

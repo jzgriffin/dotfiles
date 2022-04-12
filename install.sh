@@ -15,9 +15,6 @@ stow zsh
 # Install the dircolors
 ln -sf "$XDG_DATA_HOME/dircolors/nord/src/dir_colors" "$XDG_CONFIG_HOME/dir_colors"
 
-# Install the tmux package manager
-git clone https://github.com/tmux-plugins/tpm.git "$XDG_DATA_HOME/tmux/plugins/tpm"
-
 # Install git aliases
 git config --global alias.aa 'add --all'
 git config --global alias.br 'branch'
