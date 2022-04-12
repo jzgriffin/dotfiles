@@ -30,7 +30,7 @@ alias egrep='egrep --color=auto'
 if [[ "$(uname -s)" == "Darwin" || "$(uname -s)" =~ "BSD" ]]; then
     alias ls='ls -G'
 else
-    [[ -f $XDG_CONFIG_HOME/dir_colors ]] && eval $(dircolors $XDG_CONFIG_HOME/dir_colors)
+    [[ -f $XDG_DATA_HOME/dircolors/lscolors.sh ]] && source $XDG_DATA_HOME/dircolors/lscolors.sh
     alias ls='ls --color=auto'
 fi
 
