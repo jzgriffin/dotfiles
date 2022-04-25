@@ -28,8 +28,8 @@ prepend_search_path() {
     done
 }
 
-# Append the user binary directories to the path
-append_search_path ~/bin ~/.local/bin
+# Prepend the user binary directories to the path
+prepend_search_path ~/bin ~/.local/bin
 
 # Locally-customized zshenv
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
