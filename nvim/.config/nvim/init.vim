@@ -5,11 +5,11 @@ call plug#begin(stdpath('data').'/plugins')
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'chriskempson/base16-vim'
 Plug 'danro/rename.vim'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'mhartington/oceanic-next'
 Plug 'moll/vim-bbye'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'neovimhaskell/haskell-vim'
@@ -135,14 +135,12 @@ if has('termguicolors')
     set termguicolors
 endif
 set background=dark
-if HasPlugin('oceanic-next')
-    let g:oceanic_next_terminal_bold = 1
-    let g:oceanic_next_terminal_italic = 1
-    colorscheme OceanicNext
+if HasPlugin('base16-vim')
+    colorscheme base16-tomorrow-night
 endif
 if HasPlugin('vim-airline-themes')
     let g:airline_powerline_fonts=1
-    let g:airline_theme='oceanicnext'
+    let g:airline_theme='base16_tomorrow_night'
 endif
 
 " Additional configuration
