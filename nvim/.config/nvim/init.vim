@@ -12,6 +12,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'moll/vim-bbye'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neovimhaskell/haskell-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
