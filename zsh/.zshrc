@@ -56,12 +56,5 @@ if [[ "$simple_prompt" != "YES" ]]; then
 fi
 PROMPT="$prompt_prefix%{$fg_bold[white]%}%~%{$reset_color%}\$ "
 
-# Base16 Shell
-BASE16_SHELL="$XDG_DATA_HOME/base16-shell"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-    eval "$("$BASE16_SHELL/profile_helper.sh")"
-base16_tomorrow-night
-
 # Locally-customized zshrc
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

@@ -6,7 +6,6 @@ XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 # Install symlinks to package configurations AFTER pulling submodules
 git submodule update --init --recursive
 stow alacritty
-stow base16-shell
 stow dircolors
 stow nvim
 stow tmux

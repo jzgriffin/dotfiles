@@ -5,11 +5,11 @@ call plug#begin(stdpath('data').'/plugins')
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'chriskempson/base16-vim'
 Plug 'danro/rename.vim'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'mhartington/oceanic-next'
 Plug 'moll/vim-bbye'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'neovimhaskell/haskell-vim'
@@ -131,16 +131,18 @@ autocmd BufWritePre *
   \ endif
 
 " Colors
+if has('termguicolors')
+    set termguicolors
+endif
 set background=dark
-if HasPlugin('base16-vim')
-    let base16colorspace=256
-    colorscheme base16-tomorrow-night
-    " Do not underline the number of the current line.
-    hi CursorLineNr cterm=none
+if HasPlugin('oceanic-next')
+    let g:oceanic_next_terminal_bold = 1
+    let g:oceanic_next_terminal_italic = 1
+    colorscheme OceanicNext
 endif
 if HasPlugin('vim-airline-themes')
     let g:airline_powerline_fonts=1
-    let g:airline_theme='base16_tomorrow_night'
+    let g:airline_theme='oceanicnext'
 endif
 
 " Additional configuration
