@@ -1,6 +1,6 @@
 {
     "python.linting.flake8Enabled": true,
-    "clangd.semanticHighlighting": true,
-    "coc.preferences.semanticTokensHighlights": false,
-    "coc.preferences.formatOnSaveFiletypes": ["cpp"]
+
+    "coc.preferences.formatOnSaveFiletypes": ["*"],
+    "semanticTokens.filetypes": ["*"]
 }
