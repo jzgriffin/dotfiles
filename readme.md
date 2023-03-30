@@ -21,7 +21,9 @@ Dependencies are broken down by file/directory.
   - coc-cmake
     - cmake
   - coc-pyright
+    - black
     - flake8
+    - mypy
     - pep8
     - pyright
   - coc-rust-analyzer
@@ -40,7 +42,7 @@ pacman -S git stow \
     npm ripgrep \
     tmux \
     zsh starship
-pip install flake8 pep8 pyright
+pip install black flake8 mypy pep8 pyright
 rustup default nightly
 rustup component add rust-src clippy rustfmt
 ```
