@@ -7,10 +7,10 @@
             ],
             "rootPatterns": [
                 "*.cabal",
-                "stack.yaml",
                 "cabal.project",
+                "hie.yaml",
                 "package.yaml",
-                "hie.yaml"
+                "stack.yaml"
             ],
             "filetypes": [
                 "haskell",
@@ -18,11 +18,15 @@
             ]
         }
     },
+    "[python]": {
+        "coc.preferences.formatOnSave": true
+    },
+    "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
-    "coc.preferences.formatOnSaveFiletypes": [
-        "*"
-    ],
-    "semanticTokens.filetypes": [
-        "*"
-    ]
+    "python.linting.mypyEnabled": true,
+    "[rust]": {
+        "coc.preferences.formatOnSave": true
+    },
+    "inlayHint.enable": false,
+    "semanticTokens.enable": true
 }
