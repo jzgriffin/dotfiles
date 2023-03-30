@@ -1,0 +1,6 @@
+# nvim
+/nvim/.config/nvim/autoload/plug.vim.old
+
+# tmux
+!/tmux/.local/share/tmux/plugins/tpm
+/tmux/.local/share/tmux/plugins/*
