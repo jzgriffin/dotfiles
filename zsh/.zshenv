@@ -31,5 +31,8 @@ prepend_search_path() {
 # Prepend the user binary directories to the path
 prepend_search_path ~/bin ~/.local/bin
 
+# Include Cargo if installed
+[[ -f ~/.cargo/env ]] && source ~/.cargo/env
+
 # Locally-customized zshenv
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
