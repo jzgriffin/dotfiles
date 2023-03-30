@@ -49,6 +49,7 @@ set showmatch
 autocmd FileType * set formatoptions-=c formatoptions-=r formatoptions-=o
 set matchpairs+=<:>
 set spelllang=en_us
+set textwidth=78
 
 " Mouse
 set mouse=a
