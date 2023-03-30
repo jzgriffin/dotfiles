@@ -50,11 +50,16 @@ take() {
 }
 
 # Prompts
-prompt_prefix=""
-if [[ "$simple_prompt" != "YES" ]]; then
-    prompt_prefix="%{$fg[blue]%}%n%{$reset_color%}@%{$fg[red]%}%m%{$reset_color%}:"
+# Enable Starship if installed
+if [[ -x "$(which starship)" && "$enable_starship" != "NO" ]]; then
+    eval "$(starship init zsh)"
+else
+    prompt_prefix=""
+    if [[ "$simple_prompt" != "YES" ]]; then
+        prompt_prefix="%{$fg[blue]%}%n%{$reset_color%}@%{$fg[red]%}%m%{$reset_color%}:"
+    fi
+    PROMPT="$prompt_prefix%{$fg_bold[white]%}%~%{$reset_color%}\$ "
 fi
-PROMPT="$prompt_prefix%{$fg_bold[white]%}%~%{$reset_color%}\$ "
 
 # Locally-customized zshrc
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
