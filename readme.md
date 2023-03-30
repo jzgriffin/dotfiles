@@ -48,7 +48,7 @@ rustup component add rust-src clippy rustfmt
 ## Installation
 
 ```sh
-git clone https://github.com/nokurn/dotfiles.git ~/.dotfiles
+git clone https://github.com/jzgriffin/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 sh install.sh
 ```
