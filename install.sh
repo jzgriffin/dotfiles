@@ -1,8 +1,3 @@
-# XDG paths
-XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
-XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
-
 # Install symlinks to package configurations AFTER pulling submodules
 git submodule update --init --recursive
 stow alacritty
