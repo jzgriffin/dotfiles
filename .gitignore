@@ -1,5 +1,8 @@
 # nvim
 /nvim/.config/nvim/autoload/plug.vim.old
+/nvim/.config/nvim/local-early.vim
+/nvim/.config/nvim/local-plugin.vim
+/nvim/.config/nvim/local.vim
 
 # tmux
 !/tmux/.local/share/tmux/plugins/tpm

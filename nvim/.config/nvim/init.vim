@@ -23,6 +23,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'wakatime/vim-wakatime'
+exe 'silent! source '.stdpath('config').'/local-plugin.vim'
 call plug#end()
 
 function! HasPlugin(name)
@@ -31,6 +32,8 @@ function! HasPlugin(name)
         \ isdirectory(g:plugs[a:name].dir)
         \ )
 endfunction
+
+exe 'silent! source '.stdpath('config').'/local-early.vim'
 
 " Searching
 set ignorecase
