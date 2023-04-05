@@ -97,9 +97,9 @@ nmap <leader>as  <Plug>(coc-codeaction-source)
 nmap <leader>cq  <Plug>(coc-fix-current)
 
 " Remap keys for applying refactor code actions
-nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
-xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
-nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> <leader>cre <Plug>(coc-codeaction-refactor)
+xmap <silent> <leader>crf <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> <leader>crf <Plug>(coc-codeaction-refactor-selected)
 
 " Run the Code Lens action on the current line
 nmap <leader>cl  <Plug>(coc-codelens-action)
