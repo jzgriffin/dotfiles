@@ -16,20 +16,7 @@ Dependencies are broken down by file/directory.
 - install.sh
   - stow
 - nvim
-  - coc-clangd
-    - clangd
-  - coc-cmake
-    - cmake
-  - coc-pyright
-    - black
-    - flake8
-    - mypy
-    - pep8
-    - pyright
-  - coc-rust-analyzer
-    - rust-analyzer
-  - coc
-    - npm
+  - npm
   - ripgrep
 - zsh
   - starship (optional; auto-detected if present)
@@ -38,13 +25,10 @@ These commands will install all dependencies on Arch Linux:
 ```
 pacman -S git stow \
     alacritty ttf-iosevka-nerd \
-    neovim clang cmake python-pip rustup rust-analyzer \
+    neovim \
     npm ripgrep \
     tmux \
     zsh starship
-pip install black flake8 mypy pep8 pyright
-rustup default nightly
-rustup component add rust-src clippy rustfmt
 ```
 
 ## Installation
@@ -53,14 +37,6 @@ rustup component add rust-src clippy rustfmt
 git clone https://github.com/jzgriffin/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 sh install.sh
-```
-
-### nvim
-
-```
-:PlugUpgrade
-:PlugUpdate
-:CocInstall coc-marketplace coc-json coc-clangd coc-cmake coc-pyright coc-rust-analyzer
 ```
 
 ### tmux
