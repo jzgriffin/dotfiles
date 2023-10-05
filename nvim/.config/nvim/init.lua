@@ -186,7 +186,7 @@ vim.keymap.set('n', '<bs>', '<C-^>',
 	{ desc = 'Jump to the most recent buffer' })
 vim.keymap.set('n', '<leader>[', '<cmd>bprevious<cr>',
 	{ desc = 'Jump to the previous buffer' })
-vim.keymap.set('n', '<leader>[', '<cmd>bnext<cr>',
+vim.keymap.set('n', '<leader>]', '<cmd>bnext<cr>',
 	{ desc = 'Jump to the next buffer' })
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>',
 	{ desc = 'Write the buffer' })
