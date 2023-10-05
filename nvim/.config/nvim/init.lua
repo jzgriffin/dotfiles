@@ -94,6 +94,9 @@ mason_lspconfig.setup_handlers {
 ------------------------------------------------------------------------------
 -- Options
 
+vim.opt.timeoutlen = 300
+vim.opt.updatetime = 250
+
 ---------------------------------------
 -- Display options
 vim.opt.colorcolumn = { '+1' }
