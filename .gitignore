@@ -1,8 +1,6 @@
 # nvim
-/nvim/.config/nvim/autoload/plug.vim.old
-/nvim/.config/nvim/local-early.vim
-/nvim/.config/nvim/local-plugin.vim
-/nvim/.config/nvim/local.vim
+/nvim/.config/nvim/lazy-lock.json
+/nvim/.config/nvim/user/
 
 # tmux
 !/tmux/.local/share/tmux/plugins/tpm
