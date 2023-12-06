@@ -3,6 +3,7 @@ return {
   'bronson/vim-trailing-whitespace',
   'danro/rename.vim',
   'moll/vim-bbye',
+  'rubberduck203/aosp-vim',
   'tpope/vim-abolish',
   'tpope/vim-fugitive',
   'tpope/vim-repeat',
