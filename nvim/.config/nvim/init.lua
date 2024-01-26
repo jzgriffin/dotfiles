@@ -60,7 +60,6 @@ end
 local lsp_servers = {
   clangd = {},
   cmake = {},
-  gopls = {},
   pyright = {},
   rust_analyzer = {},
   lua_ls = {
