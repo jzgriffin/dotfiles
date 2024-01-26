@@ -158,7 +158,7 @@ vim.keymap.set('n', '<leader>!', '<cmd>source $MYVIMRC<cr>',
 vim.keymap.set({ 'n', 'x' }, '<space>', '<nop>',
 	{ desc = 'Prevent space from moving forward', silent = true })
 vim.keymap.set('x', '.', '<cmd>normal .<cr>',
-	{ desc = 'Repeat the action for each line in the selection' })
+	{ desc = 'Repeat the action for each line in the selection', noremap = true })
 
 ---------------------------------------
 -- Tab mappings
