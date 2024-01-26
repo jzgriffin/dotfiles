@@ -9,6 +9,7 @@ return {
   'tpope/vim-surround',
   'wakatime/vim-wakatime',
   'wellle/targets.vim',
+  'hrsh7th/vim-vsnip',
   { 'numToStr/Comment.nvim', config = true },
   {
     'RRethy/nvim-base16',
@@ -21,8 +22,73 @@ return {
   {
     'hrsh7th/nvim-cmp',
     dependencies = {
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-vsnip',
+      'onsails/lspkind.nvim',
     },
+    config = function()
+      local cmp = require('cmp')
+      local lspkind = require('lspkind')
+      cmp.setup({
+        snippet = {
+          expand = function(args)
+            vim.fn["vsnip#anonymous"](args.body)
+          end,
+        },
+
+        window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
+        },
+
+        mapping = {
+          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+          ["<C-f>"] = cmp.mapping.scroll_docs(4),
+          ["<C-space>"] = cmp.mapping.complete(),
+          ["<C-e>"] = cmp.mapping.close(),
+          ["<cr>"] = cmp.mapping.confirm({
+             behavior = cmp.ConfirmBehavior.Replace,
+             select = false,
+          }),
+          ["<tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
+          ["<S-tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
+        },
+
+        sources = cmp.config.sources({
+            { name = 'nvim_lsp' },
+          }, {
+            { name = 'buffer' },
+          }),
+
+        formatting = {
+          format = lspkind.cmp_format({
+            mode = 'symbol',
+            maxwidth = function() return math.floor(0.45 * vim.o.columns) end,
+            ellipsis_char = '...',
+            show_labelDetails = true,
+          })
+        },
+      })
+
+      cmp.setup.cmdline({ '/', '?' }, {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = 'buffer' }
+        },
+      })
+
+      cmp.setup.cmdline(':', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+            { name = 'path' }
+          }, {
+            { name = 'cmdline' }
+          }),
+      })
+    end,
   },
   {
     'jabirali/vim-tmux-yank',
