@@ -211,7 +211,7 @@ vim.keymap.set({'n', 'x'}, 'cy', '"+y', { desc = 'Yank to clipboard' })
 vim.keymap.set({'n', 'x'}, 'cp', '"+p', { desc = 'Paste from clipboard' })
 vim.keymap.set('x', '<', '<gv', { desc = 'Shift selection left' })
 vim.keymap.set('x', '>', '>gv', { desc = 'Shift selection right' })
-vim.keymap.set('x', '<leader>s', '<cmd>sort<cr>',
+vim.keymap.set('x', '<leader>s', "<cmd>'<,'>sort<cr>",
 	{ desc = 'Sort the selection' })
 vim.keymap.set('n', 'Y', 'y$', { desc = 'Yank to the end of the line' })
 
