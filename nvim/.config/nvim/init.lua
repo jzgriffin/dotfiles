@@ -19,10 +19,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup('plugins')
 
--- Disable netrw
-vim.g.loaded_netrwPlugin = 1
-vim.g.loaded_netrw = 1
-
 -- Configure LSP
 local lsp_on_attach = function(_, bufnr)
   local nmap = function(keys, func, desc)
@@ -59,7 +55,6 @@ end
 
 local lsp_servers = {
   clangd = {},
-  cmake = {},
   pyright = {},
   rust_analyzer = {},
   lua_ls = {
