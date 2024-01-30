@@ -92,12 +92,6 @@ return {
     end,
   },
   {
-    'jabirali/vim-tmux-yank',
-    cond = function()
-      return vim.fn.executable 'tmux' == 1
-    end,
-  },
-  {
     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
