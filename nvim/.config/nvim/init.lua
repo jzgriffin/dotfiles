@@ -146,7 +146,6 @@ vim.opt.wildmode = 'list:longest'
 
 ---------------------------------------
 -- Convenience mappings
-vim.keymap.set('n', '<cr>', '<cmd>', { desc = 'Enter command mode' })
 vim.keymap.set('n', '<leader>!', '<cmd>source $MYVIMRC<cr>',
 	{ desc = 'Reload the configuration' })
 vim.keymap.set({ 'n', 'x' }, '<space>', '<nop>',
