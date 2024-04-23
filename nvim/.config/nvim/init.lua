@@ -190,12 +190,8 @@ vim.keymap.set('n', '<leader>]', '<cmd>bnext<cr>',
 	{ desc = 'Jump to the next buffer' })
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>',
 	{ desc = 'Write the buffer' })
-vim.keymap.set('n', '<leader>W', '<cmd>bufdo <cmd>write<cr>',
-	{ desc = 'Write all buffers' })
 vim.keymap.set('n', '<leader>d', '<cmd>Bdelete<cr>',
 	{ desc = 'Close the buffer' })
-vim.keymap.set('n', '<leader>D', '<cmd>bufdo <cmd>Bdelete<cr>',
-	{ desc = 'Close all buffers' })
 
 ---------------------------------------
 -- Movement mappings
