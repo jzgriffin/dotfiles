@@ -34,3 +34,6 @@ git config --global alias.rt 'reset HEAD --'
 git config --global alias.st 'status'
 git config --global alias.up 'pull origin'
 git config --global alias.ups 'submodule update --init --recursive'
+
+# Other git configuration
+git config --global pull.rebase true
