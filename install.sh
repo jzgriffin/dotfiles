@@ -7,7 +7,7 @@ stow tmux
 stow zsh
 
 # Install git aliases
-git config --global alias.a 'add --all'
+git config --global alias.a 'add'
 git config --global alias.aa 'add --all'
 git config --global alias.br 'branch'
 git config --global alias.ci 'commit'
