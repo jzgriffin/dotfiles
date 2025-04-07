@@ -31,6 +31,22 @@ pacman -S git stow \
     zsh starship
 ```
 
+I typically also install these packages:
+
+- git
+- zsh
+- tmux
+- stow
+- neovim
+- cmake
+- ninja
+- node
+- ripgrep
+- fd
+- tree
+- jq
+- gum
+
 ## Installation
 
 ```sh
