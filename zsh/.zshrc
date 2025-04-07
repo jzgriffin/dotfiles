@@ -56,6 +56,12 @@ take() {
     mkdir -p $1 && cd $1
 }
 
+user-ssh-agent() {
+    export SSH_AUTH_SOCK=~/.ssh/ssh-agent.sock
+    ssh-add -l 2>/dev/null >/dev/null
+    [ $? -ge 2 ] && ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
+}
+
 # Prompts
 # Enable Starship if installed
 if [[ -x "$(which starship)" && "$enable_starship" != "NO" ]]; then
