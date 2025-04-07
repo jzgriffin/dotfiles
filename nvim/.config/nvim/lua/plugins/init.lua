@@ -9,6 +9,7 @@ return {
   'tpope/vim-repeat',
   'tpope/vim-surround',
   'wakatime/vim-wakatime',
+  'whonore/Coqtail',
   'wellle/targets.vim',
   'hrsh7th/vim-vsnip',
   {
