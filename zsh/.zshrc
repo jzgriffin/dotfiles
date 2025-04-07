@@ -62,6 +62,14 @@ user-ssh-agent() {
     [ $? -ge 2 ] && ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
 }
 
+git-ours() {
+    grep -lr '<<<<<<<' . | xargs git checkout --ours
+}
+
+git-theirs() {
+    grep -lr '<<<<<<<' . | xargs git checkout --theirs
+}
+
 # Prompts
 # Enable Starship if installed
 if [[ -x "$(which starship)" && "$enable_starship" != "NO" ]]; then
