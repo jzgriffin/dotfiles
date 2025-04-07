@@ -42,6 +42,13 @@ alias du='du -h'
 alias df='df -h'
 alias rtree='rg --files | tree --fromfile'
 
+# Rust aliases
+alias cf='cargo fmt'
+alias cfb='cf && cargo build'
+alias cfbt='cfb && cargo test'
+alias cfbr='cfb && cargo run'
+alias cfbtr='cfbt && cargo run'
+
 # Functions
 fpath+=~/.zsh_functions
 
