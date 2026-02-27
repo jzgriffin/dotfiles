@@ -40,5 +40,6 @@ git config --global alias.ups 'submodule update --init --recursive'
 
 # Other git configuration
 git config --global init.defaultBranch main
-git config --global pull.rebase true
 git config --global merge.conflictstyle diff3
+git config --global pull.rebase true
+git config --global rebase.autostash true
