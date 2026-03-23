@@ -1,21 +1,6 @@
 return {
   -- https://github.com/folke/snacks.nvim
   -- Collection of small quality of life plugins for Neovim
-  --
-  -- Usage (inside picker):
-  --   C-z     abort
-  --   C-u     unix-line-discard
-  --   C-f     half-page-down
-  --   C-b     half-page-up
-  --   C-a     beginning-of-line
-  --   C-e     end-of-line
-  --   M-a     toggle-all
-  --   M-g     first
-  --   M-G     last
-  --   F3      toggle-preview-wrap
-  --   F4      toggle-preview
-  --   S-Down  preview-page-down
-  --   S-Up    preview-page-up
   {
     "folke/snacks.nvim",
     dependencies = {
