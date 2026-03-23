@@ -13,6 +13,7 @@ vim.opt.termguicolors = true
 -- Window options
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.winborder = "rounded"
 
 -- Buffer options
 vim.opt.swapfile = false
@@ -46,9 +47,6 @@ vim.opt.wildmode = "list:longest"
 
 -- Diagnostic options
 vim.diagnostic.config({
-  float = {
-    border = "rounded",
-  },
   virtual_lines = {
     current_line = true,
   },
