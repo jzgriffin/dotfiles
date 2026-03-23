@@ -25,7 +25,7 @@ return {
       },
 
       keymap = {
-        ["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
+        ["<C-K>"] = { "show", "show_documentation", "hide_documentation" },
         ["<C-e>"] = { "hide", "fallback" },
         ["<CR>"] = { "accept", "fallback" },
 
