@@ -55,9 +55,9 @@ vim.keymap.set("x", ">", ">gv", { desc = "Shift selection right" })
 vim.keymap.set("n", "Y", "y$", { desc = "Yank to the end of the line" })
 
 -- Diagnostic mappings
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev,
-    { desc = "Go to previous diagnostic message" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next,
-    { desc = "Go to next diagnostic message" })
-vim.keymap.set("n", "<Leader>e", vim.diagnostic.open_float,
-    { desc = "Open floating diagnostic message" })
+vim.keymap.set("n", "[d",
+  function() vim.diagnostic.jump({ count = -1, float = true }) end,
+  { desc = "Go to previous diagnostic message" })
+vim.keymap.set("n", "]d",
+  function() vim.diagnostic.jump({ count = 1, float = true }) end,
+  { desc = "Go to next diagnostic message" })
