@@ -91,17 +91,17 @@ return {
         end,
         { desc = "Select inside function" })
 
-      -- Classes
-      vim.keymap.set({ "x", "o" }, "ac",
+      -- Types
+      vim.keymap.set({ "x", "o" }, "at",
         function()
           ts_select.select_textobject("@class.outer", "textobjects")
         end,
-        { desc = "Select around class" })
-      vim.keymap.set({ "x", "o" }, "ic",
+        { desc = "Select around type" })
+      vim.keymap.set({ "x", "o" }, "it",
         function()
           ts_select.select_textobject("@class.inner", "textobjects")
         end,
-        { desc = "Select inside class" })
+        { desc = "Select inside type" })
 
       -- Movement
       local ts_move = require("nvim-treesitter-textobjects.move")
@@ -150,27 +150,27 @@ return {
         end,
         { desc = "Move to end of previous function" })
 
-      -- Classes
-      vim.keymap.set({ "n", "x", "o" }, "]c",
+      -- Types
+      vim.keymap.set({ "n", "x", "o" }, "]t",
         function()
           ts_move.goto_next_start("@class.outer", "textobjects")
         end,
-        { desc = "Move to start of next class" })
-      vim.keymap.set({ "n", "x", "o" }, "]C",
+        { desc = "Move to start of next type" })
+      vim.keymap.set({ "n", "x", "o" }, "]T",
         function()
           ts_move.goto_next_end("@class.inner", "textobjects")
         end,
-        { desc = "Move to end of next class" })
-      vim.keymap.set({ "n", "x", "o" }, "[c",
+        { desc = "Move to end of next type" })
+      vim.keymap.set({ "n", "x", "o" }, "[t",
         function()
           ts_move.goto_previous_start("@class.outer", "textobjects")
         end,
-        { desc = "Move to start of previous class" })
-      vim.keymap.set({ "n", "x", "o" }, "[C",
+        { desc = "Move to start of previous type" })
+      vim.keymap.set({ "n", "x", "o" }, "[T",
         function()
           ts_move.goto_previous_end("@class.inner", "textobjects")
         end,
-        { desc = "Move to end of previous class" })
+        { desc = "Move to end of previous type" })
 
       -- Repetition
       local ts_repeat_move = require("nvim-treesitter-textobjects.repeatable_move")
