@@ -68,34 +68,29 @@ return {
           { desc = "Preview current hunk (inline)" })
 
         map("n", "<Leader>hb",
-          function()
-            gitsigns.blame_line({ full = true })
-          end,
-          { desc = "???" })
+          function() gitsigns.blame_line({ full = true }) end,
+          { desc = "Show blame for current line" })
 
         map("n", "<Leader>hd", gitsigns.diffthis,
-          { desc = "???" })
-
+          { desc = "Diff the current buffer against the index" })
         map("n", "<Leader>hD",
-          function()
-            gitsigns.diffthis("~")
-          end,
-          { desc = "???" })
+          function() gitsigns.diffthis("~") end,
+          { desc = "Diff the current buffer against the last commit" })
 
         map("n", "<Leader>hQ", function() gitsigns.setqflist("all") end,
-          { desc = "???" })
+          { desc = "Show all hunks in quickfix list" })
         map("n", "<Leader>hq", gitsigns.setqflist,
-          { desc = "???" })
+          { desc = "Show current buffer hunks in quickfix list" })
 
         -- Toggles
         map("n", "<Leader>tb", gitsigns.toggle_current_line_blame,
-          { desc = "???" })
+          { desc = "Toggle inline blame annotation on the current line" })
         map("n", "<Leader>tw", gitsigns.toggle_word_diff,
-          { desc = "???" })
+          { desc = "Toggle intra-line word difference highlighting" })
 
         -- Text object
         map({"o", "x"}, "ih", gitsigns.select_hunk,
-          { desc = "???" })
+          { desc = "Select current hunk" })
       end,
     },
   },

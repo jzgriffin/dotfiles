@@ -1,3 +1,0 @@
-# TODO
-
-- Document gitsigns maps
