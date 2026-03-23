@@ -1,6 +1,7 @@
 -- Load plugins first
 require("config.lazy")
 
+require("config.diagnostic")
 require("config.lsp")
 require("config.mappings")
 require("config.options")

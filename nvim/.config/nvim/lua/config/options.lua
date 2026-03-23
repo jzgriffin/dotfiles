@@ -44,10 +44,3 @@ vim.opt.mouse = "a"
 -- Command options
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.wildmode = "list:longest"
-
--- Diagnostic options
-vim.diagnostic.config({
-  virtual_lines = {
-    current_line = true,
-  },
-})
