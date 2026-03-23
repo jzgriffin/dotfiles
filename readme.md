@@ -18,6 +18,7 @@ Dependencies are broken down by file/directory.
 - nvim
   - npm
   - ripgrep
+  - tree-sitter
 - zsh
   - starship (optional; auto-detected if present)
 
