@@ -14,6 +14,7 @@ vim.opt.termguicolors = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.winborder = "rounded"
+vim.opt.pumborder = "rounded"
 
 -- Buffer options
 vim.opt.swapfile = false
