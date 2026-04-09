@@ -31,6 +31,7 @@ return {
         "make",
         "markdown",
         "python",
+        "regex",
         "rust",
         "vim",
         "vimdoc",
