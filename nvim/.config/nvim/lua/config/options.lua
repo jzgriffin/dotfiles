@@ -4,7 +4,6 @@ vim.opt.updatetime = 250
 -- Display options
 vim.opt.colorcolumn = { "+1" }
 vim.opt.cursorline = true
-vim.opt.lazyredraw = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 2
 vim.opt.showmatch = true
