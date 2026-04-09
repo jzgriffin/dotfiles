@@ -61,3 +61,23 @@ vim.keymap.set("n", "[d",
 vim.keymap.set("n", "]d",
   function() vim.diagnostic.jump({ count = 1, float = true }) end,
   { desc = "Go to next diagnostic message" })
+
+-- List navigation mappings
+
+-- <C-j>/<C-k> navigation between omnifunc items
+vim.keymap.set("i", "<C-j>",
+function() return vim.fn.pumvisible() == 1 and "<C-n>" or "<C-j>" end,
+  { desc = "Next completion item", expr = true })
+vim.keymap.set("i", "<C-k>",
+function() return vim.fn.pumvisible() == 1 and "<C-p>" or "<C-k>" end,
+  { desc = "Previous completion item", expr = true })
+
+-- <C-j>/<C-k> navigation between quickfix items
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "qf",
+  callback = function(event)
+    local opts = { buffer = event.buf, silent = true }
+    vim.keymap.set("n", "<C-j>", "<cmd>cnext<cr>", opts)
+    vim.keymap.set("n", "<C-k>", "<cmd>cprev<cr>", opts)
+  end,
+})
