@@ -52,10 +52,6 @@ return {
   --   S<tag attrs...>  Wraps visual selection with <tag attrs...>...</tag>
   "tpope/vim-surround",
 
-  -- https://github.com/wakatime/vim-wakatime
-  -- Tracks time spent editing
-  "wakatime/vim-wakatime",
-
   -- https://github.com/wellle/targets.vim
   -- Adds pair, quote, separator, argument, and tag text objects
   "wellle/targets.vim",
