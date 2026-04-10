@@ -37,6 +37,7 @@ git config --global alias.rbm 'rebase main'
 git config --global alias.rr 'restore'
 git config --global alias.rt 'reset HEAD --'
 git config --global alias.s 'status'
+git config --global alias.spsp '!git stash && git pull && git stash pop'
 git config --global alias.up 'pull origin'
 git config --global alias.ups 'submodule update --init --recursive'
 
