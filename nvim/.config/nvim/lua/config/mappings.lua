@@ -32,6 +32,8 @@ vim.keymap.set("n", "<Leader>]", "<CMD>bnext<CR>",
 	{ desc = "Jump to the next buffer" })
 vim.keymap.set("n", "<Leader>w", "<CMD>write<CR>",
 	{ desc = "Write the buffer" })
+vim.keymap.set("n", "<Leader>W", "<CMD>write<CR>",
+	{ desc = "Write all buffers" })
 
 -- Movement mappings
 vim.keymap.set("n", "<Down>", "gj", { desc = "Go down one visual line" })
