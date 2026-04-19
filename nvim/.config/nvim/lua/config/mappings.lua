@@ -1,6 +1,9 @@
 -- Convenience mappings
 vim.keymap.set({ "n", "x" }, "<Space>", "<NOP>",
 	{ desc = "Prevent space from moving forward", silent = true })
+vim.keymap.set("v", ".", ":normal .<CR>",
+  { desc = "Repeat last change on visual selection" })
+vim.keymap.set("n", "<CR>", ":", { desc = "Enter command mode" })
 
 -- Tab mappings
 vim.keymap.set("", "<S-h>", "gT", { desc = "Go to the previous tab page" })
