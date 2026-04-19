@@ -76,3 +76,11 @@ fi
 
 # Locally-customized zshrc
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# Must come last!
+
+_plugin_path="$XDG_DATA_HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+[[ -f "$_plugin_path" ]] && source "$_plugin_path"
+
+_plugin_path="$XDG_DATA_HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+[[ -f "$_plugin_path" ]] && source "$_plugin_path"
