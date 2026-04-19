@@ -80,7 +80,13 @@ fi
 # Must come last!
 
 _plugin_path="$XDG_DATA_HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
-[[ -f "$_plugin_path" ]] && source "$_plugin_path"
+if [[ -f "$_plugin_path" ]]; then
+    source "$_plugin_path"
+
+    # Use the same mapping to accept or cancel suggestion as in Vim
+    bindkey '^y' autosuggest-accept
+    bindkey '^e' autosuggest-clear
+fi
 
 _plugin_path="$XDG_DATA_HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 [[ -f "$_plugin_path" ]] && source "$_plugin_path"
