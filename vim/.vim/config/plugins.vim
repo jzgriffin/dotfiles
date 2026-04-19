@@ -37,7 +37,3 @@ colorscheme base16-tomorrow-night
 let g:lightline = {
             \ "colorscheme": "wombat",
             \ }
-
-" Remap vim-sort-motion from the default "gs" to "go" to match sort.nvim
-let g:sort_motion_mapping = "go"
-
