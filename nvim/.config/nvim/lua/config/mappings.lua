@@ -51,6 +51,8 @@ vim.keymap.set({"n", "x"}, "cp", '"+p', { desc = "Paste from clipboard" })
 
 vim.keymap.set("x", "J", ":m '>+1<CR>gv=gv", { desc = "Shift selection down" })
 vim.keymap.set("x", "K", ":m '<-2<CR>gv=gv", { desc = "Shift selection up" })
+vim.keymap.set("x", "H", "<gv", { desc = "Shift selection left" })
+vim.keymap.set("x", "L", ">gv", { desc = "Shift selection right" })
 vim.keymap.set("x", "<", "<gv", { desc = "Shift selection left" })
 vim.keymap.set("x", ">", ">gv", { desc = "Shift selection right" })
 
