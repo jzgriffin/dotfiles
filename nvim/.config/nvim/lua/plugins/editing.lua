@@ -4,7 +4,14 @@ return {
   --
   -- Usage:
   --   :FixWhitespace
-  "bronson/vim-trailing-whitespace",
+  --
+  {
+    "bronson/vim-trailing-whitespace",
+    -- Commit dc22ff46010e55d2c33edd21cdcd14f99e729b6f from 2026-04-16 is
+    -- causing erroneous highlighting at the end of popup menus. The commit
+    -- pinned here is the last working commit for me.
+    commit = "5540b3faa2288b226a8d9a4e8244558b12c598aa",
+  },
 
   -- https://github.com/numToStr/Comment.nvim
   -- Comment and uncomment lines and selections
