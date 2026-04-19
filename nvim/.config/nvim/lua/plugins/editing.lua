@@ -62,4 +62,12 @@ return {
   -- https://github.com/wellle/targets.vim
   -- Adds pair, quote, separator, argument, and tag text objects
   "wellle/targets.vim",
+
+  -- https://github.com/windwp/nvim-autopairs
+  -- Automatic pair insertion
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+  },
 }

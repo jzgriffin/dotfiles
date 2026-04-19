@@ -1,12 +1,4 @@
 return {
-  -- https://github.com/windwp/nvim-autopairs
-  -- Automatic pair insertion
-  {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = true,
-  },
-
   -- https://github.com/RRethy/nvim-base16
   -- base16 colorschemes
   {
