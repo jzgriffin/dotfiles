@@ -215,14 +215,14 @@ nnoremap cp "+p
 xnoremap cp "+p
 
 " Shift selection down
-xnoremap J :m '>+1<CR>gv=gv
+xnoremap <M-j> :m '>+1<CR>gv=gv
 " Shift selection up
-xnoremap K :m '<-2<CR>gv=gv
+xnoremap <M-k> :m '<-2<CR>gv=gv
 " Shift selection left
-xnoremap H <gv
+xnoremap <M-h> <gv
 xnoremap < <gv
 " Shift selection right
-xnoremap L >gv
+xnoremap <M-l> >gv
 xnoremap > >gv
 
 " Yank to the end of the line
