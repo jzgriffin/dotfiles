@@ -69,6 +69,16 @@ vim.keymap.set("n", "]d",
   function() vim.diagnostic.jump({ count = 1, float = true }) end,
   { desc = "Go to next diagnostic message" })
 
+-- Terminal mappings
+vim.keymap.set("t", "<C-w>h", "<C-\\><C-n><C-w>h",
+	{ desc = "Go to the window to the left" })
+vim.keymap.set("t", "<C-w>j", "<C-\\><C-n><C-w>j",
+  { desc = "Go to the window below" })
+vim.keymap.set("t", "<C-w>k", "<C-\\><C-n><C-w>k",
+  { desc = "Go to the window above" })
+vim.keymap.set("t", "<C-w>l", "<C-\\><C-n><C-w>l",
+	{ desc = "Go to the window to the right" })
+
 -- List navigation mappings
 
 -- <C-j>/<C-k> navigation between omnifunc items
